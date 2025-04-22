@@ -6,7 +6,7 @@
 
 An interactive web application that tracks planetary positions, analyzes significant celestial alignments, and visualizes both the Event Significance Index (ESI) and Local Alignment Significance Index (LASI) over time. Monitor multiple celestial bodies (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Ceres) simultaneously, discover when planetary configurations reach their peak significance, and explore how these alignments change throughout the day and across extended time periods. The LASI heatmap feature allows you to identify locations on Earth where celestial alignments appear most significant from an observer's perspective.
 
-[Live Demo](https://planetarypath.streamlit.app) <!-- Visit the deployed app here -->
+[Live Demo](https://celestial-align.streamlit.app/) <!-- Visit the deployed app here -->
 
 ![App Screenshot](Screenshot.png) <!-- Screenshot of the Celestial Alignment Analyzer app -->
 
