@@ -318,11 +318,11 @@ show_lasi = st.sidebar.checkbox("Show LASI Heatmap", value=False,
 # Only show these options if LASI is enabled
 if show_lasi:
     st.sidebar.markdown("#### LASI Map Settings")
-    lasi_resolution = st.sidebar.slider("Grid Resolution", 5, 30, 15, 5,
+    lasi_resolution = st.sidebar.slider("Grid Resolution", 5, 30, 5, 5,
                                      help="Lower values give more detailed but slower heatmap (degrees between points)")
     exclude_poles = st.sidebar.slider("Exclude Pole Regions (degrees)", 5, 30, 10, 5,
                                    help="Exclude regions within this many degrees of the poles")
-    marker_size = st.sidebar.slider("Marker Size", 4, 15, 8, 1,
+    marker_size = st.sidebar.slider("Marker Size", 4, 15, 10, 1,
                                  help="Size of the dots on the LASI heatmap")
 
     # Calculate LASI grid if enabled
