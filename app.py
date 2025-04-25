@@ -191,10 +191,11 @@ def fast_forward():
     st.session_state.selected_date = new_dt.date()
     st.session_state.selected_time = new_dt.time()
 
-# Date picker
+# Date picker with min_value set to January 1, 2000
 selected_date = st.sidebar.date_input(
     "Select Date",
-    key='selected_date' # Use key to automatically update session state
+    key='selected_date', # Use key to automatically update session state
+    min_value=datetime.date(2000, 1, 1) # Set minimum date to January 1, 2000
 )
 
 # Time picker
@@ -257,7 +258,6 @@ if 'selected_planets' not in st.session_state:
 selected_planets = st.sidebar.multiselect(
     "Select Planets to Display",
     options=planet_options,
-    default=st.session_state.selected_planets,
     key="selected_planets"
 )
 
@@ -844,10 +844,10 @@ st.subheader("ESI Variation in the Selected Date Range")
 # Add sliders for adjusting the date range
 col1, col2 = st.columns(2)
 with col1:
-    days_before = -st.slider("Days before selected date", 0, 60, 30, 1,
+    days_before = -st.slider("Days before selected date", 0, 120, 30, 1,
                           help="Select how many days before the selected date to include")
 with col2:
-    days_after = st.slider("Days after selected date", 0, 60, 15, 1,
+    days_after = st.slider("Days after selected date", 0, 120, 15, 1,
                          help="Select how many days after the selected date to include")
 
 # Calculate ESI values for the custom date range
@@ -952,7 +952,7 @@ st.markdown("""
 - Blue and red markers show the minimum and maximum ESI values for the day
 
 *Date Range ESI Chart:*
-- Shows how the ESI changes throughout your selected date range (adjustable from 0-60 days before to 0-60 days after)
+- Shows how the ESI changes throughout your selected date range (adjustable from 0-120 days before to 0-120 days after)
 - Use the sliders to customize the date range you want to analyze
 - Each point represents the ESI value at noon (UTC) for that day
 - The green dashed line marks your selected date
